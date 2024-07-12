@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Nama file input dan output
+file_input="crot.mp4"
+file_output="ah.mp4"
+
+# Waktu mulai dan durasi pemotongan
+start_time="00:00:10"  # Mulai dari detik ke-10 (format HH:MM:SS)
+duration="00:00:30"    # Durasi 10 detik (format HH:MM:SS)
+
+# Memotong video menggunakan ffmpeg
+ffmpeg -i "$file_input" -ss "$start_time" -t "$duration" -c copy "$file_output"
